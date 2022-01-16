@@ -2,7 +2,7 @@ resource "aws_eks_cluster" "default" {
   name = var.cluster-name
 
   role_arn = aws_iam_role.eks-cluster-role.arn
-  version  = 1.17
+  version  = 1.21
 
   vpc_config {
 
