@@ -31,8 +31,8 @@ module "aws-vpc" {
   aws_cidr_subnets_private = var.aws_cidr_subnets_private
   aws_cidr_subnets_public  = var.aws_cidr_subnets_public
   # vpn_cidr_blocks          = var.vpn_cidr_blocks
-  default_tags             = var.default_tags
-  eks_cluster_sg_id        = module.aws-eks-cluster.eks_cluster_sg_id
+  default_tags      = var.default_tags
+  eks_cluster_sg_id = module.aws-eks-cluster.eks_cluster_sg_id
 }
 
 # resource "aws_key_pair" "k8s-ssh-key" {

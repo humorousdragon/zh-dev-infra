@@ -50,24 +50,24 @@ variable "aws_bastion_size" {
 
 
 ## ECR Variables
-variable ecr_repository_name {
+variable "ecr_repository_name" {
   description = "Name of the ECR repository"
   #	type = string
 }
 
 ## EKS Cluster Variables
 
-variable cluster-name {
+variable "cluster-name" {
   type        = string
   description = "EKS Cluster Name"
 }
 
-variable node-group-name {
+variable "node-group-name" {
   type        = string
   default     = ""
   description = "description"
 }
-variable node-cluster-name {
+variable "node-cluster-name" {
   type        = string
   default     = ""
   description = "description"
@@ -77,7 +77,7 @@ variable node-cluster-name {
 #   description = "Node port of Dashboard Service"
 # }
 
-variable api-node-port {
+variable "api-node-port" {
   description = "Node port of Dashboard Service"
 }
 

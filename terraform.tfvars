@@ -34,4 +34,4 @@ ecr_repository_name = [
 cluster-name    = "zerohash-dev"
 node-group-name = "zerohash-dev-ng-1"
 # dash-node-port  = 30982
-api-node-port   = 31472
+api-node-port = 31472
