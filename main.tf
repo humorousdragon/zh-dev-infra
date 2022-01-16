@@ -1,12 +1,21 @@
 terraform {
   required_version = ">= 0.12"
-  backend "s3" {
-    bucket = "zh-terraform-state"
-    key    = "infra-state/terraform-dev.tfstate"
-    region = "us-east-2"
-  }
+  # backend "s3" {
+  #   bucket = "zh-terraform-state"
+  #   key    = "infra-state/terraform-dev.tfstate"
+  #   region = "us-east-2"
+  # }
 }
 
+terraform {
+  cloud {
+    organization = "ankjnn"
+
+    workspaces {
+      name = "gh-actions-zh-infra"
+    }
+  }
+}
 provider "aws" {
   access_key = var.AWS_ACCESS_KEY_ID
   secret_key = var.AWS_SECRET_ACCESS_KEY
