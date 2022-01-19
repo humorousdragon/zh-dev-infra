@@ -4,3 +4,8 @@
 terraform.tfstate
 terraform.tfstate.backup
 terraform.tfstate*
+zh-dev-bastion.pem
+*.pem
+zh-dev-eks-node.pem
+eks-config
+
