@@ -40,6 +40,8 @@ Once this job completes we should see resources on our AWS console.
 
 
 ## Current Setup:
-Currently resources mentioned above have been created within my AWS account. Terraform state for these resource is being maintained on Terraform cloud. Dashboard for kubernetes cluster has also been configured and can be accessed by following link:
-[Kubernetes Dashboard](https://spot.zerohash.online:444/)
+Currently resources mentioned above have been created within my AWS account. Terraform state for these resource is being maintained on Terraform cloud. Dashboard for kubernetes cluster has also been configured and can be accessed by following link:  
+
+[Kubernetes Dashboard](https://spot.zerohash.online:444/)  
+
 Token is provided in dash-token file in the repo.
