@@ -48,3 +48,13 @@ jobs:
     - name: Terraform Apply
       if: github.ref == 'refs/heads/master' && github.event_name == 'push'
       run: terraform apply -var-file=terraform.tfvars -auto-approve
+
+## This step will push notification on slack channel with job status
+    - name: Report Job Status
+      if: always()
+      uses: ravsamhq/notify-slack-action@master
+      with:
+        status: ${{ job.status }}
+        notify_when: 'success,failure,warnings'
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}

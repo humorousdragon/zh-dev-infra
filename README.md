@@ -22,8 +22,8 @@ Amazon Elastic Kubernetes Service (Amazon EKS) is a managed container service to
 6. Add changes by runnig `git add` and specifying files.
 7. Commit your changes by running `git commit -m "Description"`
 8. Push the code to the repo by running `git push -u origin master` after committing the changes.
-9. This will trigger the CI/CD pipeline, which uses github actions, as pipeline workflow file (.github/workflows/terraform.yml) has been added to the repo. First it will checkout the repo on the runner. It will then setup terraform on the runner. After initialiazing terraform, it will check formatting and then run plan command which will show resources it will create. Finally it will run `terraform apply` command which will create the infrastructure.
-Once this job completes we should see resources on our AWS console.
+9. This will trigger the CI/CD pipeline, which uses github actions, as pipeline workflow file (.github/workflows/terraform.yml) has been added to the repo. First it will checkout the repo on the runner. It will then setup terraform on the runner. After initialiazing terraform, it will check formatting and then run plan command which will show resources it will create. Finally it will run `terraform apply` command which will create the infrastructure.  
+We will receive **slack notification** about job status. Once this job completes successfully we should see resources on our AWS console.  
 **Note:** Please note that we are passing variable file `terraform.tfvars` so we have to add `-var=terraform.tfvars` with terraform plan and apply commands.
 
 ## To Create AWS resources from your PC:
